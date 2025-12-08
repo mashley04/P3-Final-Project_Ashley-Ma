@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!-- Template for showing the results. -->
 
-</body>
-</html>
+<!-- Using Header and Footer from base.html -->
+{% extends "base.html" %}
+{% block content %}
+
+<!--if the pokemon does not exist then the film is none and returns an alert  -->
+{% if film == None %}
+
+<div class="alert alert-danger text-center" role="alert" >
+    Sorry, could not find the Pokemon: "{{ pokemon }}". <br>
+    Please go back and try again.
+</div>
+
+{% else %}
+    <!-- Displaying all the results-->
+<!--all results within a box element from bootstrap -->
+<div class="card text-center mx-auto"  style="width:60rem;">
+    <!--display the pokemon the user chose and a picture of the pokemon -->
+      <div class="card-header" style="color: #4D320F;">
+        You chose {{upper_name}}, a {{type}} type Pokemon. <br> <img src = {{pic}} ><br> You should watch:
+      </div>
+        <!--displays film title and the description of the title -->
+      <div class="card-body" style="color: #4D320F;">
+        <h5 class="card-title">{{ film.title }}</h5>
+        <p class="card-text">{{film.description}}</p>
+      </div>
+      <div class="card-footer text-muted">
+        Go back to find another film
+      </div>
+</div>
+
+
+
+{% endif %}
+
+
+
+{% endblock %}

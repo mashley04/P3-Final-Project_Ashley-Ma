@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<!--Template containing user input -->
+<!-- Using base.tml for footer and header -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Form for user input -->
+<div class ="text-center" style="color: #4D320F;">
+
+
+<form action='{{url_for("results")}}' method="post">
+
+    <p class ="text-center" style="color: #4D320F;">
+        <br>
+        <!--Adds picture of pokemon logo -->
+        <img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pokémon_logo.svg/960px-International_Pokémon_logo.svg.png"
+        alt= "Pokemon Logo" style="max-width: 200px;">
+        <br>
+        <!--adds picture of a black x -->
+        <img src ="https://upload.wikimedia.org/wikipedia/commons/c/ca/Transparent_X.png"
+        alt= "black x" style="max-width: 30px;">
+        <br>
+        <!--adds picture of studio ghibli logo -->
+        <img src ="https://logos-world.net/wp-content/uploads/2024/07/Studio-Ghibli-Logo-1985.png"
+        alt="Studio Ghibli Logo" style="max-width: 200px;">
+        <br>
+        <br>
+        <!--Asking for user input -->
+        <label for="pokemon">Enter a Pokmon name to continue</label><br>
+        <input type="text" id="pokemon" name="pokemon">
+    </p>
+
+     <p>
+        <input type="submit" value="SUBMIT">
+    </p>
+
+</form>
+
+</div>
+
+
+{% endblock %}

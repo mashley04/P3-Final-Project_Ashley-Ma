@@ -1,0 +1,11 @@
+I used ChatGPT for functions.py because when I ran my flask I had a whole page of error, my prompt was
+"I keep recieving errors when I put in a invalid answer in flask program" and it told me to add a try
+and exception code which I did in line 26 & 28.
+
+I used chatGPT in base.html to help me with CSS and making the background of my application a certain color,
+in line 21 & 24 I added the code "background-color:" this is from my prompt how do i make the background of my
+application a different color using bootstrap.
+
+I used ChatGPT in results.html to help me center my results in line 17 I added
+"class="card text-center mx-auto"  style="width:60rem;"" based of my prompt how do I make my card centered using
+bootstrap?
