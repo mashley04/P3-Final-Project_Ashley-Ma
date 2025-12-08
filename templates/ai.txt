@@ -1,3 +1,7 @@
+Ashley Ma
+HCDE 310
+
+
 I used ChatGPT for functions.py because when I ran my flask I had a whole page of error, my prompt was
 "I keep recieving errors when I put in a invalid answer in flask program" and it told me to add a try
 and exception code which I did in line 26 & 28.
